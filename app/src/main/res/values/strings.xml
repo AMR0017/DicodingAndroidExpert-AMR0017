@@ -17,4 +17,7 @@
     <string name="username_text">Username</string>
     <string name="favorite">Favorite</string>
     <string name="profile_contentDesc">Profile Picture</string>
+    <string name="detailphoto">detailPhoto</string>
+    <string name="setfavorite">setFavorite</string>
+    <string name="sharebutton">ShareButton</string>
 </resources>

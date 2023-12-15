@@ -18,7 +18,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -68,4 +68,8 @@ dependencies {
     //koin
     implementation ("io.insert-koin:koin-core:3.2.2")
     implementation ("io.insert-koin:koin-android:3.2.2")
+
+    //enkripsi
+    implementation ("net.zetetic:android-database-sqlcipher:4.4.0")
+    implementation ("androidx.sqlite:sqlite-ktx:2.1.0")
 }

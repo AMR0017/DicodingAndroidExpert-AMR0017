@@ -18,7 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.069"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/detailphoto" />
 
 
     <ImageView
@@ -32,7 +33,8 @@
         app:layout_constraintStart_toStartOf="@+id/img_detail_photo"
         app:layout_constraintTop_toTopOf="@+id/img_detail_photo"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+        android:contentDescription="@string/setfavorite" />
 
     <TextView
         android:id="@+id/tv_detail_name"
@@ -216,7 +218,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
-        app:srcCompat="?attr/actionModeShareDrawable" />
+        app:srcCompat="?attr/actionModeShareDrawable"
+        android:contentDescription="@string/sharebutton" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
