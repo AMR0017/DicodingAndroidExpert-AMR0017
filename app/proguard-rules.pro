@@ -15,6 +15,8 @@
 -keep class org.bouncycastle.** { *; }
 -keep class org.conscrypt.** { *; }
 -keep class org.openjsse.** { *; }
+-keep class kotlin.** { *; }
+-ignorewarnings
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
