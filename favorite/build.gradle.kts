@@ -2,7 +2,7 @@ plugins {
     id("com.android.dynamic-feature")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-parcelize")
-    id ("kotlin-kapt")
+//    id ("kotlin-kapt")
 }
 android {
     namespace = "com.example.favorite"
@@ -55,8 +55,8 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
 
-    implementation ("androidx.room:room-runtime:2.4.3")
-    kapt ("androidx.room:room-compiler:2.4.3")
+//    implementation ("androidx.room:room-runtime:2.4.3")
+//    kapt ("androidx.room:room-compiler:2.4.3")
 
     //koin
     implementation ("io.insert-koin:koin-core:3.2.2")

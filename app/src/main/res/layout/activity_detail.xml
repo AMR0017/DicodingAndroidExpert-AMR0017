@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
+
     tools:context=".detail.DetailActivity">
 
     <ImageView
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
         android:textColor="?attr/colorSecondary"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -55,7 +55,7 @@
         android:id="@+id/tv_detail_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
         android:textColor="@color/git_grey"
         android:textSize="20sp"
         android:textStyle="italic"
@@ -66,7 +66,6 @@
 
 
     <TableRow
-        android:id="@+id/tableRow4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -84,7 +83,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_detail_following"
+            android:id="@+id/tvDetailFollowing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="?attr/colorSecondaryVariant"
@@ -111,7 +110,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_detail_followers"
+            android:id="@+id/tvDetailFollowers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="?attr/colorSecondaryVariant"
@@ -119,7 +118,6 @@
     </TableRow>
 
     <TableRow
-        android:id="@+id/tableRow3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -137,7 +135,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_detail_repository"
+            android:id="@+id/tvDetailRepository"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="?attr/colorSecondaryVariant"
@@ -170,7 +168,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_detail_company"
+                android:id="@+id/tvDetailCompany"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="?attr/colorOnPrimary"
@@ -192,7 +190,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_detail_location"
+                android:id="@+id/tvDetailLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="?attr/colorOnPrimary"
@@ -208,7 +206,6 @@
         app:layout_constraintGuide_begin="16dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/share_floatButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -233,7 +230,6 @@
         app:tabIndicatorColor="?attr/colorSecondary"/>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
         android:layout_width="411dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

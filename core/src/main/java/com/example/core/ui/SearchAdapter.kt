@@ -9,6 +9,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.core.R
 import com.example.core.databinding.ItemRowSearchuserBinding
 import com.example.core.domain.model.User
+import kotlin.math.min
 
 class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
 
@@ -16,9 +17,22 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
     var onItemClick: ((User) -> Unit)? = null
 
     fun setUser(newListUser : List<User>){
+        val oldItemCount = listUser.size
         listUser.clear()
         listUser.addAll(newListUser)
-        notifyDataSetChanged()
+        val newItemCount = listUser.size
+        if (oldItemCount == 0) {
+            notifyItemRangeInserted(0, newItemCount)
+        } else if (newItemCount == 0) {
+            notifyItemRangeRemoved(0, oldItemCount)
+        } else {
+            notifyItemRangeChanged(0, min(oldItemCount, newItemCount))
+            if (newItemCount > oldItemCount) {
+                notifyItemRangeInserted(oldItemCount, newItemCount - oldItemCount)
+            } else if (newItemCount < oldItemCount) {
+                notifyItemRangeRemoved(newItemCount, oldItemCount - newItemCount)
+            }
+        }
     }
 
     override fun onCreateViewHolder(

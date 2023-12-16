@@ -2,7 +2,8 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-parcelize")
-    id ("kotlin-kapt")
+//    id ("kotlin-kapt")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -18,6 +19,13 @@ android {
 
     buildTypes {
         release {
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+        debug {
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -49,8 +57,8 @@ dependencies {
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
 
     implementation ("androidx.room:room-ktx:2.4.3")
-    implementation ("androidx.room:room-runtime:2.4.3")
-    kapt ("androidx.room:room-compiler:2.4.3")
+    implementation("androidx.room:room-runtime:2.5.0")
+    ksp("androidx.room:room-compiler:2.5.0")
     androidTestImplementation ("androidx.room:room-testing:2.4.3")
 
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
